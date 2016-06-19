@@ -21,3 +21,52 @@
 		{					
 			displayName = "CH-46e";				
 		};		
+{											
+	class West										
+	{										
+		name = "BLUFOR";									
+		side = 1;									
+		class BLU_F									
+		{									
+			name = "NATO";								
+			class Helicopter								
+			{								
+				name = "Helicopter;							
+				class ou_ch_46							
+				{							
+					name = "CH-46e";						
+					side = 1;						
+					faction = "BLU_F";						
+					class Unit0						
+					{						
+						side = 1;					
+						vehicle = "B_helicrew_F";					
+						rank = "SERGEANT";					
+						position[] = {0,0,0};					
+					};						
+					class Unit1						
+					{						
+						side = 1;					
+						vehicle = "B_helicrew_F";					
+						rank = "SERGEANT";					
+						position[] = {5,-5,0};					
+					};						
+					class Unit2						
+					{						
+						side = 1;					
+						vehicle = "B_helicrew_F";					
+						rank = "CORPORAL";					
+						position[] = {-5,-5,0};					
+					};						
+					class Unit3						
+					{						
+						side = 1;					
+						vehicle = "B_helicrew_F";					
+						rank = "PRIVATE";					
+						position[] = {10,-10,0};					
+					};						
+				};							
+			};								
+		};									
+	};										
+};											
