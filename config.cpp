@@ -126,7 +126,7 @@ class CH-46e: CH-46e
 	};				
 	class Sounds: Sounds				
 	{				
-		class Engine;			
+		class Engine; {"\ou_air\sound\ch46engine.wss", 1, 1.000000};			
 		class Movement;			
 	};				
 };					
