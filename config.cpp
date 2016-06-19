@@ -119,8 +119,10 @@ class CH-46e: CH-46e
 			explosionShielding = 0;			
 			radius = 0.5;			
 		};				
-		class HitEngine;			
-		class HitRTrack;			
+		class HitEngine;
+		class HitHRotor;			
+		class HitVRotor;
+		class HitFuel;
 	};				
 	class Sounds: Sounds				
 	{				
