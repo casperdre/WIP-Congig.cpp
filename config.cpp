@@ -27,7 +27,8 @@ class Helicopter: Air
 {					
 	class NewTurret;				
 	class Sounds;				
-	class HitPoints;				
+	class HitPoints;
+	class UserActions;
 };					
 class CH-46e: CH-46e					
 {					
@@ -51,23 +52,36 @@ class CH-46e: CH-46e
 		};		
 	};			
 };				
-	class AnimationSources;				
-	class ViewPilot;				
-	class ViewOptics;				
-	class ViewCargo;				
+	class AnimationSources;
+	{
+		
+	};
+	class ViewPilot;
+	{
+		
+	};
+	class ViewOptics;
+	{
+		
+	}:
+	class ViewCargo;
+	{
+			
+	};
+	
 	class HeadLimits;				
 	class HitPoints: HitPoints				
 	{				
 		class HitHull;
 		{				
-			armor = 0.3;			
+			armor = 0.30;			
 			material = -1;			
 			name = "hull_hit";			
 			visual = "hull_hit";			
-			passThrough = 0.2;			
+			passThrough = 0.20;			
 			minimalHit = 0.05;			
 			explosionShielding = 0;			
-			radius = 0.5;			
+			radius = 0.50;			
 		};				
 		class HitEngine;
 		{
@@ -96,5 +110,29 @@ class CH-46e: CH-46e
 	{				
 		class Engine; {"\ou_air\sound\ch46engine.wss", 1, 1.000000};			
 		class Movement;			
-	};				
+	};		
+	class UserActions
+	{	
+		{
+			class Openramp
+			{
+				displayName = "Lower Ramp";
+				position = "pos_action";
+				radius = 7.500000;
+				onlyForPlayer = false;
+				condition = "this animationPhase 'ramp' < 0.5 AND (PLAYER == driver this)";
+				statement = "this animate ['ramp', 1]";
+			};
+			class CloseDoors
+			{
+				displayName = "Raise Ramp";
+				position = "pos_action";
+				radius = 7.500000;
+				onlyForPlayer = false;
+				condition = "this animationPhase 'ramp' >= 0.5 AND (PLAYER == driver this)";
+				statement = "this animate ['ramp', 0]";
+			};
+		};
+		
+	};
 };					
