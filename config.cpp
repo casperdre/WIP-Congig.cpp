@@ -49,10 +49,8 @@ class CH-46e: CH-46e
 			gunnerOpticsModel = "\ca\weapons\optika_empty";
 			gunnerForceOptics = false;
 		};		
-				class CommanderOptics;	
-			};		
-		};			
-	};				
+	};			
+};				
 	class AnimationSources;				
 	class ViewPilot;				
 	class ViewOptics;				
