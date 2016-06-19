@@ -7,7 +7,7 @@
 		requiredAddons[] = {"CUP_Core","A3_Air_F", "A3_Weapons_F", "A3_Soft_F", "A3_data_F", "A3_Characters_F"};					
 		author = "TF-31 Team";										
 	};						
-{										
+};										
 	class BLU_F									
 	{									
 		displayName = "NATO";								
@@ -21,7 +21,7 @@
 		{					
 			displayName = "CH-46e";				
 		};		
-{											
+};											
 class Air;					
 class Helicopter: Air					
 {					
@@ -69,7 +69,10 @@ class CH-46e: CH-46e
 			
 	};
 	
-	class HeadLimits;				
+	class HeadLimits;
+	{
+		
+	};
 	class HitPoints: HitPoints				
 	{				
 		class HitHull;
@@ -95,15 +98,36 @@ class CH-46e: CH-46e
 		};	
 		class HitHRotor;			
 		{
-		
+			armor = 0.2;			
+			material = -1;			
+			name = "HRotor_Hit";			
+			visual = "HRotor_Hit";			
+			passThrough = 0;			
+			minimalHit = 0.02;			
+			explosionShielding = 4;			
+			radius = 0.36;			
 		};	
 		class HitVRotor;
 		{
-			
+			armor = 0.26;			
+			material = -1;			
+			name = "VRotor_Hit";			
+			visual = "VRotor_Hit";			
+			passThrough = 0;			
+			minimalHit = 0.2;			
+			explosionShielding = 0;			
+			radius = 0.36;			
 		};
 		class HitFuel;
 		{
-			
+			armor = 0.4;			
+			material = -1;			
+			name = "Fuel_Hit";			
+			visual = "Fuel_Hit";			
+			passThrough = 1;			
+			minimalHit = 0.4;			
+			explosionShielding = 4;			
+			radius = 0.2;			
 		};
 	};				
 	class Sounds: Sounds				
