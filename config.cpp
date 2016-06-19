@@ -120,6 +120,15 @@ class CH-46e: CH-46e
 			radius = 0.5;			
 		};				
 		class HitEngine;
+		{				
+			armor = 0.9;			
+			material = -1;			
+			name = "engine_hit";			
+			passThrough = 0;			
+			minimalHit = 0.12;			
+			explosionShielding = 2;			
+			radius = 0.25;			
+		};				
 		class HitHRotor;			
 		class HitVRotor;
 		class HitFuel;
