@@ -1,3 +1,4 @@
+class CfgPatches			
 {							
 	class ou_air					
 	{						
@@ -8,6 +9,9 @@
 		author = "TF-31 Team";										
 	};						
 };										
+
+class CfgFactionClasses				
+{
 	class BLU_F									
 	{									
 		displayName = "NATO";								
@@ -22,17 +26,26 @@
 			displayName = "CH-46e";				
 		};		
 };											
-class Air;					
-class Helicopter: Air					
-{					
+	class CfgVehicleClasses						
+	{						
+		class Helicopter					
+		{					
+			displayName = "CH-46e";				
+		};					
+	};											
+	
 	class NewTurret;				
 	class Sounds;				
 	class HitPoints;
 	class UserActions;
 };					
-class CH-46e: CH-46e					
-{					
-	class Turrets				
+{
+class Air;			
+class Air: Helicopter			
+};
+class Helicopter F: Helicopter
+{
+	class Turrets		
 	{				
 		class co_pilot: NewTurret
 		{
