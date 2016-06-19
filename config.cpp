@@ -22,54 +22,6 @@
 			displayName = "CH-46e";				
 		};		
 {											
-	class West										
-	{										
-		name = "BLUFOR";									
-		side = 1;									
-		class BLU_F									
-		{									
-			name = "NATO";								
-			class Helicopter								
-			{								
-				name = "Helicopter;							
-				class ou_ch_46							
-				{							
-					name = "CH-46e";						
-					side = 1;						
-					faction = "BLU_F";						
-					class Unit0						
-					{						
-						side = 1;					
-						vehicle = "B_helicrew_F";					
-						rank = "SERGEANT";					
-						position[] = {0,0,0};					
-					};						
-					class Unit1						
-					{						
-						side = 1;					
-						vehicle = "B_helicrew_F";					
-						rank = "SERGEANT";					
-						position[] = {5,-5,0};					
-					};						
-					class Unit2						
-					{						
-						side = 1;					
-						vehicle = "B_helicrew_F";					
-						rank = "CORPORAL";					
-						position[] = {-5,-5,0};					
-					};						
-					class Unit3						
-					{						
-						side = 1;					
-						vehicle = "B_helicrew_F";					
-						rank = "PRIVATE";					
-						position[] = {10,-10,0};					
-					};						
-				};							
-			};								
-		};									
-	};										
-};											
 class Air;					
 class Helicopter: Air					
 {					
@@ -120,18 +72,27 @@ class CH-46e: CH-46e
 			radius = 0.5;			
 		};				
 		class HitEngine;
-		{				
-			armor = 0.9;			
+		{
+			armor = 0.6;			
 			material = -1;			
 			name = "engine_hit";			
 			passThrough = 0;			
 			minimalHit = 0.12;			
-			explosionShielding = 2;			
+			explosionShielding = 1;			
 			radius = 0.25;			
-		};				
+		};	
 		class HitHRotor;			
+		{
+		
+		};	
 		class HitVRotor;
+		{
+			
+		};
 		class HitFuel;
+		{
+			
+		};
 	};				
 	class Sounds: Sounds				
 	{				
