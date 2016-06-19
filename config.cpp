@@ -70,3 +70,61 @@
 		};									
 	};										
 };											
+class Air;					
+class Helicopter: Air					
+{					
+	class NewTurret;				
+	class Sounds;				
+	class HitPoints;				
+};					
+class CH-46e: CH-46e					
+{					
+	class Turrets				
+	{				
+		class co_pilot: NewTurret
+		{
+			startEngine = true;
+			outGunnerMayFire = true;
+			primaryGunner = 0;
+			commanding = -1;
+			proxyIndex = 1;
+			gunnerName = "Co-Pilot";
+			memoryPointsGetInGunner = "pos_driver";
+			memoryPointsGetInGunnerDir = "pos_driver_dir";
+			gunnerAction = "UH1Y_Pilot";
+			gunnerInAction = "UH1Y_Pilot";
+			initTurn = 0;
+			gunnerOpticsModel = "\ca\weapons\optika_empty";
+			gunnerForceOptics = false;
+		};		
+				class CommanderOptics;	
+			};		
+		};			
+	};				
+	class AnimationSources;				
+	class ViewPilot;				
+	class ViewOptics;				
+	class ViewCargo;				
+	class HeadLimits;				
+	class HitPoints: HitPoints				
+	{				
+		class HitHull;
+		{				
+			armor = 0.3;			
+			material = -1;			
+			name = "hull_hit";			
+			visual = "hull_hit";			
+			passThrough = 0.2;			
+			minimalHit = 0.05;			
+			explosionShielding = 0;			
+			radius = 0.5;			
+		};				
+		class HitEngine;			
+		class HitRTrack;			
+	};				
+	class Sounds: Sounds				
+	{				
+		class Engine;			
+		class Movement;			
+	};				
+};					
